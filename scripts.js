@@ -1,10 +1,5 @@
 // Array of professions to display, each followed by a period
-const professionsToDisplay = [
-  "Programmer.",
-  "Youtuber.",
-  "Professor.",
-  "Garbage Collector.",
-];
+const professionsToDisplay = ["Gammer.", "Jedai.", "Patronomo.", "Dislexo."];
 
 // Get the heading element where the text will be displayed
 const targetHeading = document.getElementById("var");
@@ -15,6 +10,14 @@ let isCurrentStringComplete = false; // Flag indicating if the current string ha
 let currentProfessionIndex = 0; // Index of the current profession within the array
 
 function startTyping() {
+  // to shade text
+  if (isCurrentStringComplete === false && currentCharacterIndex === 0) {
+    targetHeading.setAttribute(
+      "data-text",
+      professionsToDisplay[currentProfessionIndex]
+    );
+  }
+
   // Check if there are more characters to type in the current profession:
   if (
     currentCharacterIndex < professionsToDisplay[currentProfessionIndex].length
