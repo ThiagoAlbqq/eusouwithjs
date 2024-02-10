@@ -12,11 +12,13 @@ body {
   flex-direction: column;
   height: 100vh;
 }
-div {
-  padding-left: 5%;
+
+span {
+  padding-left: 50px;
 }
 
 h1 {
+  padding-left: 50px;
   font-size: 2rem;
   height: 50px;
   color: #9b59b6;
@@ -29,7 +31,8 @@ h1::before {
   position: absolute;
   top: 0;
   left: 0;
-  width: 95vw;
+  width: auto;
   overflow: hidden;
   color: rgba(0, 0, 0, 0.5);
+  padding-left: 50px;
 }
